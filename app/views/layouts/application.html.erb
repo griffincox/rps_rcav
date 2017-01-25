@@ -7,8 +7,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <ul>
+    <li><%= link_to("play rock", controller: "games", action: "play_rock") %></li>
+    <li><%= link_to("play paper", controller: "games", action: "play_paper") %></li>
+    <li><%= link_to("play scissors", controller: "games", action: "play_scissors") %></li>
+  </ul>
+  <hr />
 
-<%= yield %>
+  <%= yield %>
 
 </body>
 </html>
