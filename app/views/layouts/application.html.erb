@@ -2,19 +2,44 @@
 <html>
 <head>
   <title>RockPaperScissors</title>
+  <link rel="stylesheet" href="/assets/css/bootstrap.css">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <ul>
-    <li><%= link_to("play rock", controller: "games", action: "play_rock") %></li>
-    <li><%= link_to("play paper", controller: "games", action: "play_paper") %></li>
-    <li><%= link_to("play scissors", controller: "games", action: "play_scissors") %></li>
-  </ul>
-  <hr />
-
-  <%= yield %>
-
+  <div class="container">
+    <div class="row">
+      <div class="col-med-8 col-offset-2">
+        <hr />
+        <ul id="choose-move-buttons">
+          <li>
+            <a href="/rock">
+              <button type="button" class="btn btn-med btn-primary choose-move">
+                Play Rock
+              </button>
+            </a>
+          </li>
+          <li>
+            <a href="/paper">
+              <button type="button" class="btn btn-med btn-primary choose-move">
+                Play Paper
+              </button>
+            </a>
+          </li>
+          <li>
+            <a href="/scissors">
+              <button type="button" class="btn btn-med btn-primary choose-move">
+                Play Scissors
+              </button>
+            </a>
+          </li>
+        </ul>
+        <hr />
+      </div>
+    </div>
+    <%= yield %>
+  </div>
 </body>
 </html>

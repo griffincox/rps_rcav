@@ -1,4 +1,7 @@
 class GamesController < ApplicationController
+  def index
+    render("games/index.html.erb")
+  end
   def play_rock
     @computer_move = ["paper", "rock", "scissors"].sample
 

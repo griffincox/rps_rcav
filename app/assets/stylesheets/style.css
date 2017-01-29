@@ -1,0 +1,20 @@
+/*div {
+  border: 2px solid black;
+}*/
+#choose-move-buttons {
+  list-style: none;
+  text-align: center;
+}
+#choose-move-buttons li {
+  display: inline;
+}
+#choose-move-buttons a {
+  text-decoration: none;
+  color: white;
+}
+.choose-move {
+  width: 32%;
+}
+.content {
+  text-align: center;
+}
